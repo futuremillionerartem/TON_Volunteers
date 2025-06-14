@@ -16,7 +16,38 @@ html, body {
     touch-action: manipulation;
     overscroll-behavior: none;
 }
-
+a {
+    /* Убираем стандартное подчёркивание */
+    text-decoration: none !important;
+    width: 100%;
+    
+    /* Наследуем цвет текста от родителя */
+    color: inherit !important;
+    display: block;
+    
+    /* Убираем изменение цвета при посещении */
+    &:visited {
+        color: inherit !important;
+    }
+    
+    /* Убираем все эффекты при наведении */
+    &:hover, &:focus, &:active {
+        text-decoration: none !important;
+        color: inherit !important;
+        background-color: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+    
+    /* Убираем пунктирную рамку в Firefox */
+    &::-moz-focus-inner {
+        border: 0 !important;
+    }
+    
+    /* Отключаем стандартное поведение в iOS */
+    -webkit-tap-highlight-color: transparent !important;
+}
 .mobile-screen {
     width: 100vh;
     height: 100vh;
