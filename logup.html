@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зарегистрироваться</title>
+    <link rel="stylesheet" href="logup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="mobile-screen">
+        <img src="src/img/Group 6.png" alt="Decorative dark shape" class="blob blob1">
+        <img src="src/img/Group 4.png" alt="Decorative purple shape" class="blob blob2">
+        <img src="src/img/Group 5.png" alt="Decorative blue shape" class="blob blob3">
+
+
+        <div class="login-container">
+            <h1>Создание аккаунта</h1>
+    
+            <form hx-post="/login" hx-target="#form-message" hx-swap="innerHTML">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Имя" required>
+                </div>
+                <div class="input-group">
+                    <input type="phone" name="phone" placeholder="Контактный телефон" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group password-wrapper">
+                    <input type="password" id="password" name="password" placeholder="Пароль" required>
+                </div>
+
+
+
+                <div id="form-message"></div>
+
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+
+            <p class="signup-link">
+                Уже есть аккаунт.<a href="#">Войти</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
