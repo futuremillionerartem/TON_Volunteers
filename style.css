@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e5ec;
+}
+html, body {
+    touch-action: manipulation;
+    overscroll-behavior: none;
+}
+
+.mobile-screen {
+    width: 100vh;
+    height: 100vh;
+    background-color: #F0F2F5;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.blob {
+    position: absolute;
+    pointer-events: none; 
+    z-index: 1; 
+}
+
+.blob2 {
+    right: -30px;
+}
+
+.blob3 {
+    top: 100px;
+    left: -50px;
+
+}
+
+
+.login-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background-color: #BBDEFA;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #27374D;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input::placeholder {
+    color: #999;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 16px;
+    background-color: #2775F2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(39, 117, 242, 0.3);
+}
+
+button[type="submit"]:hover {
+    background-color: #1a63d4;
+}
+
+.signup-link {
+    margin-top: 30px;
+    color: #526D82;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #2775F2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+#form-message {
+    text-align: center;
+    font-size: 14px;
+    min-height: 20px;
+}
+
